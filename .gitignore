@@ -1,0 +1,16 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# PHP Sessions
+sessions/
+
+# Editor Settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency Directories (if composer is used later)
+vendor/
+node_modules/
