@@ -2,11 +2,24 @@
 // Veritabanı yapılandırması
 // Database configuration
 
-$host = '127.0.0.1';
-$port = '3307';
-$dbname = 'blog_db';
-$username = 'root'; // Varsayılan XAMPP/WAMP kullanıcı adı
-$password = '';     // Varsayılan XAMPP/WAMP şifresi (genelde boştur)
+// Detect environment
+// Detect environment
+$httpHost = $_SERVER['HTTP_HOST'];
+if (strpos($httpHost, 'localhost') !== false || strpos($httpHost, '127.0.0.1') !== false) {
+    // Local Configuration
+    $host = '127.0.0.1';
+    $port = '3307';
+    $dbname = 'blog_db';
+    $username = 'root';
+    $password = '';
+} else {
+    // Live Database Configuration (InfinityFree)
+    $host = 'sql100.infinityfree.com';
+    $port = '3306';
+    $dbname = 'if0_40748074_blog';
+    $username = 'if0_40748074';
+    $password = 'Mohaned2025';
+}
 
 try {
     // PDO bağlantısı oluşturma

@@ -37,13 +37,17 @@ Proje varsayılan olarak şu veritabanı ayarlarını kullanır (`config.php`):
 ### 4. Projeyi Çalıştırma
 Aşağıdaki yöntemlerden birini kullanabilirsiniz:
 
-**Yöntem A: PHP Dahili Sunucusu (Önerilen)**
+**Yöntem A: Otomatik Başlatıcı (Önerilen - En Kolay)**
+1. Proje ana klasöründeki **`START_WEBSITE.bat`** dosyasına çift tıklayın.
+2. Sunucu otomatik başlar ve tarayıcı açılır.
+
+**Yöntem B: Manuel Terminal Komutu**
 1. Proje klasörünü VS Code ile açın.
 2. Terminali açın (`Ctrl + "`) ve şu komutu yazın:
    ```bash
-   php -S localhost:8080
+   php -S localhost:9999
    ```
-3. Tarayıcınızda şu adrese gidin: **[http://localhost:8080](http://localhost:8080)**
+3. Tarayıcınızda şu adrese gidin: **[http://localhost:9999](http://localhost:9999)**
 
 **Yöntem B: XAMPP htdocs**
 1. Tüm proje klasörünü `C:\xampp\htdocs\blog` içerisine kopyalayın.
