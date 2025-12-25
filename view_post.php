@@ -40,11 +40,17 @@ if ($id > 0) {
             <div class="col-lg-8">
                 <!-- Başlık ve Meta Bilgiler -->
                 <h1 class="mb-3"><?php echo htmlspecialchars($yazi['title']); ?></h1>
-                <div class="text-muted mb-4">
+                <div class="text-muted mb-4 d-flex justify-content-between align-items-center">
                     <small>
                         <span class="me-3"><i class="bi bi-person"></i> Yazar: <?php echo htmlspecialchars($yazi['username']); ?></span>
                         <span><i class="bi bi-calendar"></i> Tarih: <?php echo date('d F Y', strtotime($yazi['created_at'])); ?></span>
                     </small>
+                    
+                    <?php if (isset($_SESSION['user_id']) && ($_SESSION['user_id'] == $yazi['author_id'] || $_SESSION['role'] === 'admin')): ?>
+                        <a href="edit_post.php?id=<?php echo $id; ?>" class="btn btn-sm btn-outline-warning">
+                            <i class="bi bi-pencil-square"></i> Düzenle
+                        </a>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Görsel -->

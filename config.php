@@ -4,7 +4,7 @@
 
 // Detect environment
 // Detect environment
-$httpHost = $_SERVER['HTTP_HOST'];
+$httpHost = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
 if (strpos($httpHost, 'localhost') !== false || strpos($httpHost, '127.0.0.1') !== false) {
     // Local Configuration
     $host = '127.0.0.1';
