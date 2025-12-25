@@ -94,9 +94,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['guncelle'])) {
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <?php include 'index.php'; // Navbar için include etmek yerine navbar kodunu kopyalamak veya ayrı bir navbar dosyası yapmak daha iyi olurdu ama hızlı çözüm için manuel navbar koyalım veya base yapıyı kullanalım. 
-    // index.php router yapısında olduğu için include etmek döngüye sokabilir.
-    // Basit bir container içine alalım, stil dosyasını çektik zaten.
+    <?php 
+    // Navbar will be manually added below
     ?>
     
     <!-- Navbar Manuel (Kısa Versiyon) -->

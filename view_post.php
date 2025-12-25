@@ -50,6 +50,13 @@ if ($id > 0) {
                         <a href="edit_post.php?id=<?php echo $id; ?>" class="btn btn-sm btn-outline-warning">
                             <i class="bi bi-pencil-square"></i> Düzenle
                         </a>
+                    <?php else: ?>
+                        <!-- Debug/Feedback: Button hidden explanation -->
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Düzenlemek için yazar olmalısınız veya Admin girişi yapmalısınız.">
+                            <button class="btn btn-sm btn-outline-secondary" disabled style="opacity: 0.5;">
+                                <i class="bi bi-pencil-square"></i> Düzenle (Yetkisiz)
+                            </button>
+                        </span>
                     <?php endif; ?>
                 </div>
 
